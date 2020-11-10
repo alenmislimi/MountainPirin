@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+
+<html lang="bg">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <meta name="author" content="Ален Мислими" />
+    <title>Планина ПИРИН</title>
+    <link rel="stylesheet" href="index_files/main_page.css" type="text/css">
+    <link rel="shortcut icon" href="index_files/images/icon.png" type="image/png">
+
+</head>
+<body>
+    <div id="container">
+        <div id="nav">
+            <ul class="level1">
+                <li>
+                    <a href="index_files/welcome.html" target="main" onclick="return scrollToTop();"><img src="index_files/images/home.png" /></a>
+                </li>
+                <li class="submenu">
+                    <a href="#" onclick="return scrollToTop();">Географска характеристика <img src="index_files/images/nav_down.png" /></a>
+                    <ul class="level2">
+                        <li><a href="index_files/topics/geo/location.html" target="main" onclick="return scrollToTop();">Географско положение</a></li>
+                        <li><a href="index_files/topics/geo/divisions.html" target="main" onclick="return scrollToTop();">Деление</a></li>
+                        <li><a href="index_files/topics/geo/peaks.html" target="main" onclick="return scrollToTop();">Върхове</a></li>
+                        <li class="submenu">
+                            <a href="#" onclick="return scrollToTop();">Климат и води <img src="index_files/images/nav_right.png" /></a>
+                            <ul class="level3">
+                                <li><a href="index_files/topics/geo/climate_waters/climate.html" target="main" onclick="return scrollToTop();">Климат</a></li>
+                                <li><a href="index_files/topics/geo/climate_waters/rivers.html" target="main" onclick="return scrollToTop();">Реки</a></li>
+                                <li><a href="index_files/topics/geo/climate_waters/lakes.html" target="main" onclick="return scrollToTop();">Езера</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index_files/topics/geo/flora_fauna.html" target="main" onclick="return scrollToTop();">Флора и фауна</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" onclick="return scrollToTop();">Туризъм <img src="index_files/images/nav_down.png" /></a>
+                    <ul class="level2">
+                        <li><a href="index_files/topics/tourism/hut_routes.html" target="main" onclick="return scrollToTop();">Хижи и маршрути</a></li>
+                        <li><a href="index_files/topics/tourism/touristic_routes.html" target="main" onclick="return scrollToTop();">Туристически маршрути</a></li>
+                    </ul>
+                </li>
+                <li><a href="index_files/topics/transport/transport.html" target="main" onclick="return scrollToTop();">Транспорт</a></li>
+                <li class="submenu">
+                    <a href="#" onclick="return scrollToTop();">За автора <img src="index_files/images/nav_down.png" /></a>
+                    <ul class="level2">
+                        <li><a href="index_files/author/author.html" target="main" onclick="return scrollToTop();">Информация</a></li>
+                        <li><a href="index_files/author/contact.html" target="main" onclick="return scrollToTop();">Контакт</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="spacer">
+            &nbsp;
+        </div>
+        <div id="header"><img name="slide" src="images/header1.jpg" /></div>
+        <div id="content">
+            <iframe id="iframeContent" name="main" src="index_files/welcome.html" seamless></iframe>
+            <div id="rightbar">
+                <ul>
+                    <li>
+                        <p>Mестоположение на Пирин:</p>
+                    </li>
+                    <li>
+                        <div id="map-canvas" />
+                    </li>
+                    <li>
+                        <hr />
+                    </li>
+                    <li>
+                        <p>Допълнителни информации:</p>
+                    </li>
+                    <li>
+                        <a href="http://www.pirin.bg" target="_blank">
+                            <img src="index_files/images/pirin_logo.jpg" />
+                            <p>
+                                Oфициален сайт на Национален парк "Пирин"
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <br />
+                    </li>
+                    <li>
+                        <a href="http://www.pss.bg/vremeto/region.php?region_id=3" target="_blank">
+                            <img src="index_files/images/weather_logo.jpg" />
+                            <p>
+                                Състоянието на пистите и времето в Пирин
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <br />
+                    </li>
+                    <li>
+                        <a href="http://www.bgvakancia.com/offers_map.php?mestnost_id=2" target="_blank">
+                            <img src="index_files/images/bed_logo.jpg" />
+                            <p>
+                                Хотели, вили и къщи за гости в Пирин
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer">
+            <a href="index_files/author/author.html" target="main" onclick="return scrollToTop();"><span>&copy 2015, Ален Мислими</span></a>
+        </div>
+        
+    <script language="JavaScript">
+        var i = 0;
+        var path = new Array();
+        // LIST OF IMAGES 
+        path[0] = "./index_files/images/header2.jpg";
+        path[1] = "./index_files/images/header3.jpg";
+        path[2] = "./index_files/images/header1.jpg";
+        function swapImage()
+        {
+            document.slide.src = path[i];
+            if (i < path.length - 1) i++;
+            else i = 0;
+            setTimeout("swapImage()", 4000);
+        }
+        window.onload = swapImage;
+    </script>
+    <script language="JavaScript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlzdjgIGUsIRTyU1uDzO7ESZfBNdvMuQg&sensor=false">
+    </script>
+    <script language="JavaScript">
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng(41.754749, 23.432877),
+                zoom: 10
+            };
+            var map = new google.maps.Map(document.getElementById("map-canvas"),
+                mapOptions);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script language="JavaScript">
+        var timeOut;
+        function scrollToTop() {
+            if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0) {
+                window.scrollBy(0, -50);
+                timeOut = setTimeout('scrollToTop()', 10);
+            }
+            else clearTimeout(timeOut);
+            return true;
+        }
+    </script>
+
+    </div>
+</body>
+</html>
