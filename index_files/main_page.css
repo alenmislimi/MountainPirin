@@ -3,7 +3,7 @@
     height:100%;
     font-family:Verdana, Geneva, sans-serif;
     font-size:12pt;
-    background-color:rgb(128, 23, 23);
+    background-color:rgb(70, 243, 70);
 }
 #container
 {
@@ -24,7 +24,7 @@
     border-bottom-left-radius:10px;  
     border-bottom-right-radius:10px ;
     background: rgb(183, 184, 180); 
-	background: linear-gradient(top, #dfff94 0%, rgb(17, 94, 144) 100%);  
+	background: linear-gradient(top, #dfff94 0%, rgb(104, 205, 97) 100%);  
 	background: -moz-linear-gradient(top, #dfff94 0%, #AACD4B 100%); 
 	background: -webkit-linear-gradient(top, #dfff94 0%,#AACD4B 100%); 
 }
@@ -98,7 +98,7 @@
 }	
 #nav ul.level2 li a:hover
 {
-	background: #4c7db9;
+	background: #59b94c;
     border-radius: 10px; 
 }
 #nav ul.level3
@@ -132,7 +132,7 @@
     clear:both;
     position:relative;
     margin-top:13px;
-    background-color : rgb(75, 125, 205);
+    background-color : rgb(102, 243, 128);
     padding: 0рх;
     z-index:0;
     border-radius:10px;
